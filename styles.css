@@ -1,0 +1,153 @@
+body {
+    background: white;
+    color: rgb(30, 30, 30);
+    font-family: Calibri, Helvetica, Arial;
+    margin: 40px 10% 40px 10%;
+    padding: 0;
+}
+
+.logo a {
+    background-color: silver;
+    background-image: url("images/Zhao.jpg");
+    background-size: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 70px;
+    position: relative;
+    text-indent: -99999px;
+    width: 70px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav {
+    display: inline-block;
+    margin: 0 23px 50px 0;
+    vertical-align: middle;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 26px; 
+    margin-right: 12px;
+    padding: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.name a {
+    color: rgb(30, 30, 30);
+}
+
+.name a:hover {
+    color: rgb(80, 80, 80)
+}
+
+.menu a:hover {
+    color: rgb(0, 100, 100)
+}
+
+.menu a {
+    color: rgb(0, 140, 140);
+}
+
+.tags {
+    color: rgb(150, 150, 150);
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.tags li {
+    display: inline-block;
+    height: 36px;
+    margin-right: 20px;
+}
+
+.icons {
+    vertical-align: sub;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.post {
+    margin-left: 100px;
+}
+
+/* Responsive Rules*/
+@media screen and (max-width: 644px) {
+    .post {
+        margin-left: 3px;
+    }
+}
+
+.post {
+    margin-bottom: 100px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 40px;
+    color: rgb(35, 35, 35);
+}
+
+figure {
+    margin-left: 0;
+    /*padding-bottom: 24px;*/
+}
+
+.horizontal li {
+    display: inline-block;
+    width: 45%;
+}
+
+.horizontal li img {
+    width: 100%;
+}
+
+.vertical {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.vertical img {
+    width: 100%;
+}
+
+@media screen and (min-width: 892px) {
+    .horizontal ul {
+        display: inline-block;
+    }
+    .horizontal li {
+        width: 252px;
+    }
+    .vertical {
+        width: 552px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 18px;
+    }
+}
+
+figcaption {
+    margin-bottom: 6px;
+}
+
+iframe {
+    position: relative;
+    max-width: 552px;
+    width: 80%;
+    height: 300px;
+}
