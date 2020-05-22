@@ -2,7 +2,7 @@ body {
     background: white;
     color: rgb(30, 30, 30);
     font-family: Calibri, Helvetica, Arial;
-    margin: 40px 5% 40px 10%;
+    margin: 40px 10% 40px 10%;
     padding: 0;
 }
 
@@ -80,6 +80,7 @@ a {
 
 .post {
     margin-left: 100px;
+    background-color: aqua;
 }
 
 /* Responsive Rules*/
