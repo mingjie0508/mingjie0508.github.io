@@ -121,6 +121,7 @@ figure {
     display: block;
     width: 100%;
     margin: 0;
+    background-color: grey;
 }
 .vertical img {
     width: 100%;
