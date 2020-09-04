@@ -1,47 +1,192 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mingjie Zhao</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="assets/styles.css">
     </head>
 
     <body>
-        <header>
-            <nav class="logo">
-                <a href="index.html">Selfie Zhao</a>
-            </nav>
-            <nav>
-                <ul class="name">
-                    <li><a href="index.html">Mingjie Zhao</a></li>
-                </ul>
-                <ul class="menu">
+        <a name="top"></a>
+
+        <section class="background">
+            <div class="menu">
+                <ul>
                     <li><a href="index.html"><strong>Home</strong></a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="art.html">Art</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="https://github.com/mingjie0508" target="_blank">
+                            <img src="icons/github2.png" class="icons">
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+            <div class="portrait">
+                <h1>Mingjie Zhao</h1>
+                <div>Portrait</div>
+            </div>
+        </section>
 
-        <ul>
-            <li class="post">
-                <h1>I'm Mingjie!</h1>
-                <p>This is my personal website, 
-                    and also my first encounter with web page development.
-                    I built this web page because I thought that
-                    my art ideas need a way to come together.
+        <section class="main">
+            <div class="post">
+                <h2>Introduction</h2>
+                <p class="text">Hi, it's me, Mingjie. Thanks for taking your 
+                    time to check my website. To get things started, let me 
+                    introduce a bit about myself. Right now, I am studying at 
+                    the University of Waterloo, pursuing a degree in Data 
+                    Science and hoping to graduate by 2024. This is my personal 
+                    website, and also my first experience with website 
+                    development. This website is around three topics: computer 
+                    programming, math, and art, all of which I've been 
+                    really passionate about. 
                 </p>
-                <p>I would like to present my creative ideas and thoughts 
-                    in the form of drawings, photographs, and hands-on projects.
-                    Some of the posts are school work, 
-                    while others are personal projects. 
+                <p class="text">To me, sharing ideas is just as important as 
+                    creating ideas. I do not expect anyone to get inspired by 
+                    my work, although it is nice to provide some inspiration. I 
+                    am hoping that by viewing my work, you can learn more about 
+                    myself. 
                 </p>
-                <ul class="tags">
-                    <li><img src="icons/calendar.png" class="icons">Posted on January 11, 2020</li>
-                </ul>
-            </li>
+            </div>
 
-            <li class="post">
-                <h2>Castle</h2>
+            <div class="post">
+                <h2>Computer Programming</h2>
+                <div class="nav" data-modal-target="program1"
+                style="background-image:url(nav/pygame_maze_nav.png)">
+                    <div class="text-wrap">Pygame Maze Game</div>
+                </div>
+                <div class="nav" data-modal-target="program2"
+                style="background-image:url(nav/maze_generator_nav.png)">
+                    <div class="text-wrap">Maze Generator</div>
+                </div>
+                <div class="nav" data-modal-target="program3"
+                style="background-image:url(nav/colour_detector_nav.png)">
+                    <div class="text-wrap">Colour Detector</div>
+                </div>
+            </div>
+
+            <div class="modal" id="program1">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Pygame Maze Game</h2>
+                    <p class="text">In order to increase my exposure to software 
+                        development with Python, I decided to build a Python maze 
+                        game with graphics UI. The game features include score 
+                        counter, timer, scrolling map, buttons, and keyboard 
+                        events.
+                    </p>
+                    <img src="images/pygame_maze_screenshot1.png" 
+                    alt="pygame_maze_screenshot">
+                </div>
+            </div>
+
+            <div class="modal" id="program2">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Maze Generator</h2>
+                    <p class="text">This project is a maze generator achieved with recursive 
+                        back-tracking algorithm. The maze map is first recorded 
+                        in a text file, and then the game is put together with 
+                        the UI from SDL2. Here is how recursive backtracking 
+                        works in this project:
+                    </p>
+                    <p class="text">1. Choose a starting point in the field. </p>
+                    <p class="text">2. Randomly choose a wall at that point and carve a 
+                        passage through to the adjacent cell, but only if the 
+                        adjacent cell has not been visited yet. This becomes 
+                        the new current cell.
+                    </p>
+                    <p class="text">3. If all adjacent cells have been visited, back up to 
+                        the last cell that has uncarved walls and repeat. 
+                    </p>
+                    <p class="text">4. The algorithm ends when the process has backed all 
+                        the way up to the starting point.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal" id="program3">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Colour Detector</h2>
+                    <p class="text">One of my hobbies is creating art. There 
+                        are many times when I want to know the rgb values from  
+                        an image. This inspired me to implement a colour picker 
+                        on my own. The result is an easy-to-use program that 
+                        enables the user to access the colour codes of a 
+                        selected image.  
+
+                    </p>
+                    <img src="images/colour_detector_screenshot1.png" 
+                    alt="pygame_maze_screenshot">
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Math</h2>
+                <div class="nav" data-modal-target="math1"
+                style="background-image:url(nav/average_distance_nav.png)">
+                    <div class="text-wrap">
+                        Average Distance between Random Points
+                    </div>
+                </div>
+                <div class="nav" data-modal-target="math2"
+                style="background-image:url(nav/circle_geometry_nav.png)">
+                    <div class="text-wrap">
+                        Sangaku Circle Geometry
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="math1">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Average Distance between Random Points</h2>
+                    <p class="text">This document discusses the average 
+                        Euclidean distance between two random points in a unit 
+                        hypercube. It was written after I completed my first 
+                        university-level statistics course, and was an 
+                        application of the knowledge that I obtained from that 
+                        course. Three math problems were solved. The first two 
+                        involve evaluating the average distance in lower 
+                        dimensions (one and two dimensions). The last one 
+                        involves an approximation of the average distance in 
+                        higher dimensions. The quality of the approximation was 
+                        then checked by using MATLAB.
+                    </p>
+                    <a class="link" href="documents/Average_Distance.pdf" target="_blank">
+                        Average_Distance.pdf
+                    </a>
+                </div>
+            </div>
+
+            <div class="modal" id="math2">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Sangaku Circle Geometry</h2>
+                    <p class="text">I consider geometry as a big game of 
+                        shapes. I love shapes. This is why I am fond of 
+                        geometry and art. This document discusses three 
+                        geometry problems with tangent circles, from simple to 
+                        complicated, all of which were originated from Japan 
+                        hundreds of years ago. Tangent circles are known as 
+                        circles in a common plane that intersect in a single 
+                        point. The key to solving these problems is to make use 
+                        of the right angles formed by the tangent circles. Most 
+                        interestingly, the last problem was solved by reducing 
+                        the problem to a simpler one using conformal mapping in 
+                        the complex number system. 
+                    </p>
+                    <a class="link" href="documents/Sangaku_Circle_Geometry.pdf" target="_blank">
+                        Sangaku_Circle_Geometry.pdf
+                    </a>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Art</h2>
                 <figure class="vertical">
                     <a href="images/disney_castle_view.png" target="_blank">
                         <img src="images/disney_castle.png" alt="disney_castle">
@@ -49,55 +194,47 @@
                     <figcaption>Castle at Shanghai Disneyland</figcaption>
                     <figcaption>Media: ink</figcaption>
                 </figure>
-                <ul class="tags">
-                    <li><img src="icons/calendar.png" class="icons">Posted on May 18, 2020</li>
-                </ul>
-            </li>
+            </div>
 
-            <li class="post">
-                <h2>Flipbook Short Video</h2>
-                <iframe src="https://www.youtube.com/embed/FwMrkMUkklI" 
-                allowfullscreen frameborder="0">
-                </iframe>
-                <figcaption>Media: video</figcaption>
-                <figcaption>Used iOS App:
-                    <a href="https://apps.apple.com/us/app/folioscope/id1084331400" target="_blank">
-                        Folioscope
-                    </a></figcaption>
-                <ul class="tags">
-                    <li><img src="icons/calendar.png" class="icons">Posted on May 19, 2020</li>
-                </ul>
-            </li>
-
-            <li class="post">
-                <h2>Numbers</h2>
+            <div class="post">
                 <figure class="vertical">
                     <a href="images/numbers_1_view.png" target="_blank">
                         <img src="images/numbers_1.png" alt="numbers art 1">
                     </a>
+                    <figcaption>Let the numbers guide me</figcaption>
                     <figcaption>Media: ink and collage</figcaption>
                 </figure>
                 <figure class="vertical">
                     <a href="images/numbers_2_view.png" target="_blank">
                         <img src="images/numbers_2.png" alt="numbers art 2">
                     </a>
+                    <figcaption>Ocean</figcaption>
                     <figcaption>Media: stencil and acrylic paint</figcaption>
                 </figure>
-                <ul class="tags">
-                    <li><img src="icons/calendar.png" class="icons">Posted on January 20, 2020</li>
+            </div>
+        </section>
+
+        <section>
+            <div class="menu">
+                <ul>
+                    <li><a class="link" href="#top">Back to top</a></li>
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="https://github.com/mingjie0508" target="_blank">
+                            <img src="icons/github2.png" class="icons">
+                        </a>
+                    </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </section>
 
         <footer>
             <hr/>
-            <h4>Site made my Mingjie Zhao</h4>
-            <h4>Icons made by 
-                <a href="https://www.flaticon.com/authors/dave-gandy"
-                title="Dave Gandy" target="_blank">Dave Gandy</a> from 
-                <a href="https://www.flaticon.com/" title="Flaticon" 
-                target="_blank"> www.flaticon.com</a>
-            </h4>
+            <p>© Untitled. All rights reserved.</p>
         </footer>
+
+        <script src="assets/popup.js"></script>
     </body>
 </html>
