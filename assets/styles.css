@@ -1,3 +1,16 @@
+@font-face {
+    font-family: Calibri;
+    src: url(calibri.ttf);
+}
+
+body {
+    background: white;
+    color: rgb(30, 30, 30);
+    font-family: Calibri;
+    padding: 0;
+    margin: 0;
+}
+
 .background {
     background-image: linear-gradient(125deg, #ffff41, #96fa96, #96e1e1);
     position: relative;
@@ -22,12 +35,6 @@
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-@media screen and (max-width: 520px) {
-    .background2 {
-        height: 130px;
-    }
 }
 
 h1 {
@@ -60,16 +67,7 @@ ul {
     padding: 0;
 }
 
-body {
-    background: white;
-    color: rgb(30, 30, 30);
-    font-family: Calibri, Helvetica, Arial;
-    padding: 0;
-    margin: 0;
-}
-
 .menu {
-    /*position: absolute;*/
     top: 0;
     margin: 0px 8% 0px 8%;
 }
@@ -82,6 +80,27 @@ body {
     display: inline-block;
     font-size: 24px; 
     padding: 10px 16px 10px 0;
+}
+
+.icons {
+    vertical-align: bottom;
+    margin-right: 10px;
+    width: 30px;
+}
+
+.icons:hover {
+    filter: brightness(80%);
+}
+
+@media screen and (max-width: 608px) {
+    .menu li {
+        font-size: 20px;
+        padding: 10px 12px 10px 0;
+    }
+    
+    .icons {
+        width: 26px;
+    }
 }
 
 a {
@@ -190,28 +209,6 @@ strong {
     color: rgba(0,0,0,0.5);
 }
 
-.tags {
-    color: rgb(150, 150, 150);
-    font-size: 18px;
-    margin-top: 12px;
-}
-
-.tags li {
-    display: inline-block;
-    height: 36px;
-    margin-right: 20px;
-}
-
-.icons {
-    vertical-align: text-top;
-    margin-right: 10px;
-    width: 30px;
-}
-
-.icons:hover {
-    filter: brightness(80%);
-}
-
 .main, footer {
     margin: 0 8% 20px 8%;
 }
@@ -276,5 +273,6 @@ iframe {
 }
 
 .link {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
 }
