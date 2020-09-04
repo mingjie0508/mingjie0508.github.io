@@ -84,7 +84,7 @@ ul {
 
 .icons {
     vertical-align: bottom;
-    margin-right: 10px;
+    margin-right: 6px;
     width: 30px;
 }
 
@@ -93,12 +93,17 @@ ul {
 }
 
 @media screen and (max-width: 608px) {
+    .background2 {
+        height: 72px;
+    }
+
     .menu li {
         font-size: 20px;
-        padding: 10px 12px 10px 0;
+        padding: 6px 12px 6px 0;
     }
     
     .icons {
+        margin-right: 2px;
         width: 26px;
     }
 }
