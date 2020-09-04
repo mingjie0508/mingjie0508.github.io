@@ -24,6 +24,12 @@
     100% { background-position: 0% 50%; }
 }
 
+@media screen and (max-width: 520px) {
+    .background2 {
+        height: 120px;
+    }
+}
+
 h1 {
     font-size: 60px;
     color: rgb(35, 35, 35);
@@ -66,7 +72,6 @@ body {
     /*position: absolute;*/
     top: 0;
     margin: 0px 8% 0px 8%;
-    padding: 10px 0 10px 0;
 }
 
 .menu ul {
@@ -76,7 +81,7 @@ body {
 .menu li {
     display: inline-block;
     font-size: 24px; 
-    padding-right: 16px;
+    padding: 10px 16px 10px 0;
 }
 
 a {
