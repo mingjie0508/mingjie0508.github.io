@@ -12,6 +12,7 @@
 }
 
 .lightbox img {
+    align-items: start;
     max-height: 100vh;
     max-width: 100%;
 }
