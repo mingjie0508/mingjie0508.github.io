@@ -55,7 +55,7 @@
     left: 0;
     font-size: 32px;
     font-weight: bold;
-    padding: 50vh 15vw 50vh 15vw;
+    padding: 50vh 15vw;
     user-select: none;
     cursor: pointer;
     color: rgba(0,200,200,0);
@@ -91,12 +91,14 @@
         animation: cssAnimation 3s linear none;
         transition: all .3s ease-in-out;
         opacity: 0;
-        padding: 2vh 10vw;
+        top: 0;
+        padding: 46px 10vw 2vh 88vw;
         right: 0;
     }
 
     .lightbox-prev {
-        padding: 50vh 10vw 50vh 10vw;
+        top: 15vh;
+        padding: 35vh 10vw 50vh 10vw;
     }
 
     .lightbox-next {
