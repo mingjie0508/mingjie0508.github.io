@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mingjie Zhao</title>
-        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/lightbox.css">
     </head>
 
     <body>
@@ -26,7 +27,7 @@
             </div>
             <div class="portrait">
                 <h1>Mingjie Zhao</h1>
-                <div>Portrait</div>
+                <div style="background-image:url(images/Zhao.jpg)">Portrait</div>
             </div>
         </section>
 
@@ -44,10 +45,8 @@
                     really passionate about. 
                 </p>
                 <p class="text">To me, sharing ideas is just as important as 
-                    creating ideas. I do not expect anyone to get inspired by 
-                    my work, although it is nice to provide some inspiration. I 
-                    am hoping that by viewing my work, you can learn more about 
-                    myself. 
+                    creating ideas. I am hoping that by viewing my work, you 
+                    can learn more about myself. 
                 </p>
             </div>
 
@@ -113,8 +112,7 @@
                     <h2>Colour Detector</h2>
                     <p class="text">One of my hobbies is creating art. There 
                         are many times when I want to know the rgb values from  
-                        an image. This inspired me to implement a colour picker 
-                        on my own. The result is an easy-to-use program that 
+                        an image. The result is an easy-to-use program that 
                         enables the user to access the colour codes of a 
                         selected image.  
 
@@ -144,9 +142,11 @@
                 <div class="modal-content">
                     <span class="modal-close">&times;</span>
                     <h2>Average Distance between Random Points</h2>
-                    <p class="text">This document discusses the average 
-                        Euclidean distance between two random points in a unit 
-                        hypercube. It was written after I completed my first 
+                    <p class="text">In nature, many problems involve distance-
+                        based interactions between random events or elements. 
+                        This document discusses the average Euclidean distance 
+                        between two random points in a unit hypercube. 
+                        It was written after I completed my first 
                         university-level statistics course, and was an 
                         application of the knowledge that I obtained from that 
                         course. Three math problems were solved. The first two 
@@ -167,14 +167,16 @@
                     <span class="modal-close">&times;</span>
                     <h2>Sangaku Circle Geometry</h2>
                     <p class="text">I consider geometry as a big game of 
-                        shapes. I love shapes. This is why I am fond of 
-                        geometry and art. This document discusses three 
-                        geometry problems with tangent circles, from simple to 
-                        complicated, all of which were originated from Japan 
-                        hundreds of years ago. Tangent circles are known as 
-                        circles in a common plane that intersect in a single 
-                        point. The key to solving these problems is to make use 
-                        of the right angles formed by the tangent circles. Most 
+                        shapes. It is one of the ways in which math and art 
+                        intersect each other. This document discusses three 
+                        geometry problems with tangent circles, all of which 
+                        were originated from Japan hundreds of years ago. The 
+                        beauty of these problems lies in the aesthetic pleasure 
+                        derived from the abstractness, purity, and depth of the 
+                        math behind. Tangent circles are known as circles in a 
+                        common plane that intersect in a single point. The key 
+                        to solving these problems is to make use of the right 
+                        angles formed by the tangent circles. Most 
                         interestingly, the last problem was solved by reducing 
                         the problem to a simpler one using conformal mapping in 
                         the complex number system. 
@@ -188,31 +190,67 @@
             <div class="post">
                 <h2>Art</h2>
                 <figure class="vertical">
-                    <a href="images/disney_castle_view.png" target="_blank">
-                        <img src="images/disney_castle.png" alt="disney_castle">
-                    </a>
+                    <img src="images/disney_castle.png"
+                    onclick="openModal('ink-lightbox');currentSlide('ink-slide',1)"
+                    alt="Castle at Shanghai Disneyland">
                     <figcaption>Castle at Shanghai Disneyland</figcaption>
                     <figcaption>Media: ink</figcaption>
                 </figure>
             </div>
+    
+            <div id="ink-lightbox" class="lightbox">
+                <div class="ink-slide">
+                    <div class="lightbox-counter">1 of 1</div>
+                    <img src="images/disney_castle_view.png">
+                </div>
+                <span class="lightbox-close" 
+                onclick="closeModal('ink-lightbox')">&times;</span>
+                <a class="lightbox-prev"
+                onclick="plusSlides('ink-slide',-1)">&#10094;</a>
+                <a class="lightbox-next"
+                onclick="plusSlides('ink-slide',1)">&#10095;</a>
+                <div class="lightbox-caption">
+                    <p id="ink-caption"></p>
+                </div>
+            </div>
 
             <div class="post">
                 <figure class="vertical">
-                    <a href="images/numbers_1_view.png" target="_blank">
-                        <img src="images/numbers_1.png" alt="numbers art 1">
-                    </a>
+                    <img src="images/numbers_1.png"
+                    onclick="openModal('num-lightbox');currentSlide('num-slide',1)"
+                    alt="numbers art 1">
                     <figcaption>Let the numbers guide me</figcaption>
                     <figcaption>Media: ink and collage</figcaption>
                 </figure>
                 <figure class="vertical">
-                    <a href="images/numbers_2_view.png" target="_blank">
-                        <img src="images/numbers_2.png" alt="numbers art 2">
-                    </a>
+                    <img src="images/numbers_2.png"
+                    onclick="openModal('num-lightbox');currentSlide('num-slide',2)"
+                    alt="numbers art 2">
                     <figcaption>Ocean</figcaption>
                     <figcaption>Media: stencil and acrylic paint</figcaption>
                 </figure>
             </div>
         </section>
+
+        <div id="num-lightbox" class="lightbox">
+            <div class="num-slide">
+                <div class="lightbox-counter">1 of 2</div>
+                <img src="images/numbers_1_view.png">
+            </div>
+            <div class="num-slide">
+                <div class="lightbox-counter">2 of 2</div>
+                <img src="images/numbers_2_view.png">
+            </div>
+            <span class="lightbox-close" 
+            onclick="closeModal('num-lightbox')">&times;</span>
+            <a class="lightbox-prev"
+            onclick="plusSlides('num-slide',-1)">&#10094;</a>
+            <a class="lightbox-next"
+            onclick="plusSlides('num-slide',1)">&#10095;</a>
+            <div class="lightbox-caption">
+                <p id="num-caption"></p>
+            </div>
+        </div>
 
         <footer class="background3">
             <div class="menu">
@@ -231,6 +269,7 @@
             </div>
         </footer>
 
-        <script src="assets/popup.js"></script>
+        <script src="assets/javascript/popup.js"></script>
+        <script src="assets/javascript/javascript.js"></script>
     </body>
 </html>
