@@ -1,0 +1,113 @@
+.lightbox {
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+.lightbox-counter, .lightbox-close {
+    position: absolute;
+    color: rgba(0,240,240,0.6);
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    padding: 2vh 3vw;
+}
+
+.lightbox-counter {
+    font-size: 24px;
+    top: 40px;
+    right: 18vw;
+    cursor: default;
+}
+
+.lightbox-close {
+    top: 32px;
+    font-size: 36px;
+    font-weight: bold;
+    right: 12vw;
+    user-select: none;
+    cursor: pointer;
+    color: rgba(0,240,240,0.6);
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+    color: rgba(0,240,240,0.8);
+}
+
+.lightbox-prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 50vh 15vw 50vh 15vw;
+    user-select: none;
+    cursor: pointer;
+    color: rgba(0,200,200,0);
+    transition-duration: 0.4s;
+}
+
+.lightbox-next {
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 35vh 15vw 50vh 15vw;
+    user-select: none;
+    cursor: pointer;
+    color: rgba(0,200,200,0);
+    transition-duration: 0.4s;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    color: rgba(0,240,240,0.6);
+}
+
+@media screen and (max-width: 892px) {
+    .lightbox-counter {
+        animation: cssAnimation 3s linear none;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+    }
+
+    .lightbox-close {
+        animation: cssAnimation 3s linear none;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+        padding: 2vh 10vw;
+        right: 0;
+    }
+
+    .lightbox-prev {
+        padding: 50vh 10vw 50vh 10vw;
+    }
+
+    .lightbox-next {
+        padding: 35vh 10vw 50vh 10vw;
+    }
+}
+
+@keyframes cssAnimation {
+    0%, 100% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+}
