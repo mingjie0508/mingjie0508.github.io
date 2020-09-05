@@ -11,8 +11,11 @@
     z-index: 1000;
 }
 
-.lightbox img {
+.ink-slide {
     align-items: start;
+}
+
+.lightbox img {
     max-height: 100vh;
     max-width: 100%;
 }
