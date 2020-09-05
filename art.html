@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=0.8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mingjie Zhao</title>
-        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/lightbox.css">
     </head>
 
     <body>
@@ -31,18 +29,38 @@
             <div class="post">
                 <h2>Mask</h2>
                 <figure class="vertical">
-                    <a href="images/mask_view.png" target="_blank">
-                        <img src="images/mask.png" alt="Colour Pencil Mask Drawing">
-                    </a>
+                    <img src="images/mask.png"
+                    onclick="openModal('mask-lightbox');currentSlide('mask-slide',1)"
+                    alt="Knitted full head mask">
                     <figcaption>Knitted full head mask</figcaption>
                     <figcaption>Media: colour pencil</figcaption>
                 </figure>
                 <figure class="vertical">
-                    <a href="images/mask_closeup_view.png" target="_blank">
-                        <img src="images/mask_closeup.png" alt="Mask Drawing Filling in Colours">
-                    </a>
+                    <img src="images/mask_closeup.png"
+                    onclick="openModal('mask-lightbox');currentSlide('mask-slide',2)"
+                    alt="Filling in Colours">
                     <figcaption>Filling in colours</figcaption>
                 </figure>
+            </div>
+    
+            <div id="mask-lightbox" class="lightbox">
+                <div class="mask-slide">
+                    <div class="lightbox-counter">1 of 2</div>
+                    <img src="images/mask_view.png">
+                </div>
+                <div class="mask-slide">
+                    <div class="lightbox-counter">2 of 2</div>
+                    <img src="images/mask_closeup_view.png">
+                </div>
+                <span class="lightbox-close" 
+                onclick="closeModal('mask-lightbox')">&times;</span>
+                <a class="lightbox-prev"
+                onclick="plusSlides('mask-slide',-1)">&#10094;</a>
+                <a class="lightbox-next"
+                onclick="plusSlides('mask-slide',1)">&#10095;</a>
+                <div class="lightbox-caption">
+                    <p id="mask-caption"></p>
+                </div>
             </div>
 
             <div class="post">
@@ -62,26 +80,26 @@
                 <figure class="horizontal">
                     <ul>
                         <li>
-                            <a href="images/kami_1_view.png" target="_blank">
-                                <img src="images/kami_1.png" alt="kami art 1">
-                            </a>
+                            <img src="images/kami_1.png"
+                            onclick="openModal('kami-lightbox');currentSlide('kami-slide',1)"
+                            alt="kami 1">
                         </li>
                         <li>
-                            <a href="images/kami_2_view.png" target="_blank">
-                                <img src="images/kami_2.png" alt="kami art 1">
-                            </a>
+                            <img src="images/kami_2.png"
+                            onclick="openModal('kami-lightbox');currentSlide('kami-slide',2)"
+                            alt="kami 2">
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="images/kami_3_view.png" target="_blank">
-                                <img src="images/kami_3.png" alt="kami art 1">
-                            </a>
+                            <img src="images/kami_3.png"
+                            onclick="openModal('kami-lightbox');currentSlide('kami-slide',3)"
+                            alt="kami 3">
                         </li>
                         <li>
-                            <a href="images/kami_4_view.png" target="_blank">
-                                <img src="images/kami_4.png" alt="kami art 1">
-                            </a>
+                            <img src="images/kami_4.png"
+                            onclick="openModal('kami-lightbox');currentSlide('kami-slide',4)"
+                            alt="kami 4">
                         </li>
                     </ul>
                     <figcaption>Kami, the Japanese word for "paper"</figcaption>
@@ -93,37 +111,82 @@
                     </figcaption>
                 </figure>
             </div>
+    
+            <div id="kami-lightbox" class="lightbox">
+                <div class="kami-slide">
+                    <div class="lightbox-counter">1 of 4</div>
+                    <img src="images/kami_1_view.png">
+                </div>
+                <div class="kami-slide">
+                    <div class="lightbox-counter">2 of 4</div>
+                    <img src="images/kami_2_view.png">
+                </div>
+                <div class="kami-slide">
+                    <div class="lightbox-counter">3 of 4</div>
+                    <img src="images/kami_3_view.png">
+                </div>
+                <div class="kami-slide">
+                    <div class="lightbox-counter">4 of 4</div>
+                    <img src="images/kami_4_view.png">
+                </div>
+                <span class="lightbox-close"
+                onclick="closeModal('kami-lightbox')">&times;</span>
+                <a class="lightbox-prev"
+                onclick="plusSlides('kami-slide',-1)">&#10094;</a>
+                <a class="lightbox-next"
+                onclick="plusSlides('kami-slide',1)">&#10095;</a>
+                <div class="lightbox-caption">
+                    <p id="kami-caption"></p>
+                </div>
+            </div>
             
             <div class="post">
-                <h2>Castle</h2>
+                <h2>Sketchbook Drawings</h2>
                 <figure class="vertical">
-                    <a href="images/disney_castle_view.png" target="_blank">
-                        <img src="images/disney_castle.png" alt="disney_castle">
-                    </a>
+                    <img src="images/disney_castle.png"
+                    onclick="openModal('ink-lightbox');currentSlide('ink-slide',1)"
+                    alt="Castle at Shanghai Disneyland">
                     <figcaption>Castle at Shanghai Disneyland</figcaption>
                     <figcaption>Media: ink</figcaption>
                 </figure>
-            </div>
-
-
-            <div class="post">
-                <h2>Roots</h2>
                 <figure class="vertical">
-                    <a href="images/roots_view.png" target="_blank">
-                        <img src="images/roots.png" alt="tree roots">
-                    </a>
-                    <figcaption>Media: Ink</figcaption>
+                    <img src="images/roots.png"
+                    onclick="openModal('ink-lightbox');currentSlide('ink-slide',2)"
+                    alt="Roots">
+                    <figcaption>Roots</figcaption>
+                    <figcaption>Media: ink</figcaption>
+                </figure>
+                <figure class="vertical">
+                    <img src="images/falling_down.png"
+                    onclick="openModal('ink-lightbox');currentSlide('ink-slide',3)"
+                    alt="Falling down">
+                    <figcaption>Falling down</figcaption>
+                    <figcaption>Media: ink</figcaption>
                 </figure>
             </div>
-
-            <div class="post">
-                <h2>Falling Down</h2>
-                <figure class="vertical">
-                    <a href="images/falling_down_view.png" target="_blank">
-                        <img src="images/falling_down.png" alt="Falling Down Drawing">
-                    </a>
-                    <figcaption>Media: Ink</figcaption>
-                </figure>
+    
+            <div id="ink-lightbox" class="lightbox">
+                <div class="ink-slide">
+                    <div class="lightbox-counter">1 of 3</div>
+                    <img src="images/disney_castle_view.png">
+                </div>
+                <div class="ink-slide">
+                    <div class="lightbox-counter">2 of 3</div>
+                    <img src="images/roots_view.png">
+                </div>
+                <div class="ink-slide">
+                    <div class="lightbox-counter">3 of 3</div>
+                    <img src="images/falling_down_view.png">
+                </div>
+                <span class="lightbox-close" 
+                onclick="closeModal('ink-lightbox')">&times;</span>
+                <a class="lightbox-prev"
+                onclick="plusSlides('ink-slide',-1)">&#10094;</a>
+                <a class="lightbox-next"
+                onclick="plusSlides('ink-slide',1)">&#10095;</a>
+                <div class="lightbox-caption">
+                    <p id="ink-caption"></p>
+                </div>
             </div>
         </section>
 
@@ -143,5 +206,7 @@
                 <p>© Untitled. All rights reserved.</p>
             </div>
         </footer>
+
+        <script src="assets/javascript/javascript.js"></script>
     </body>
 </html>
